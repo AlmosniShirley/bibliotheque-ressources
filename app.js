@@ -154,9 +154,14 @@
         '<span class="ph">' + (ICONES[ext] || ICONES.PDF) + "<b>" + esc(ext || "DOC") + "</b></span></a>";
     }
 
-    var tags = (r.tags || []).map(function (t) {
+    var tags = (r.tags || []).slice(0, 4).map(function (t) {
       return '<button type="button" class="tag" data-tag="' + esc(t) + '">#' + esc(t) + "</button>";
     }).join("");
+
+    var COPIER = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></svg>';
+    function copie(lien) {
+      return '<button type="button" class="btn icon" data-copier="' + esc(lien) + '" aria-label="Copier le lien" title="Copier le lien">' + COPIER + "</button>";
+    }
 
     var boutons;
     if (payant) {
@@ -165,27 +170,29 @@
         : '<span class="btn off" aria-disabled="true">Bientôt en vente</span>';
       if (r.extrait && image) boutons += '<button type="button" class="btn ghost" data-voir="' + r._id + '">Voir l\'extrait</button>';
       else if (r.extrait) boutons += '<a class="btn ghost" href="' + esc(r.extrait) + '" target="_blank" rel="noopener">Lire l\'extrait</a>';
-      boutons += '<button type="button" class="btn ghost" data-copier="' + esc(r.achat || r.extrait || "") + '">Copier le lien</button>';
+      boutons += copie(r.achat || r.extrait || "");
     } else if (image) {
       boutons = '<button type="button" class="btn" data-voir="' + r._id + '">Voir</button>' +
-        '<a class="btn ghost" href="' + esc(url) + '" download>Télécharger</a>';
+        '<a class="btn ghost" href="' + esc(url) + '" download>Télécharger</a>' + copie(url);
     } else if (externe) {
-      boutons = '<a class="btn" href="' + esc(url) + '" target="_blank" rel="noopener">Ouvrir le lien</a>';
+      boutons = '<a class="btn" href="' + esc(url) + '" target="_blank" rel="noopener">Ouvrir le lien</a>' + copie(url);
     } else {
       boutons = '<a class="btn" href="' + esc(url) + '" target="_blank" rel="noopener">Ouvrir</a>' +
-        '<a class="btn ghost" href="' + esc(url) + '" download>Télécharger</a>';
+        '<a class="btn ghost" href="' + esc(url) + '" download>Télécharger</a>' + copie(url);
     }
-    if (!payant) boutons += '<button type="button" class="btn ghost" data-copier="' + esc(url) + '">Copier le lien</button>';
+
+    var pastille = payant
+      ? '<span class="prix-pastille">' + (r.prix ? esc(r.prix) : "Bientôt") + "</span>"
+      : '<span class="prix-pastille gratuit">Gratuit</span>';
+    vignette = vignette.replace(/<\/(button|a)>$/, pastille + "</$1>");
+
+    var infos = [r.type ? '<span class="kind">' + esc(r.type) + "</span>" : "", r.date ? '<time datetime="' + esc(r.date) + '">' + esc(dateFr(r.date)) + "</time>" : ""].filter(Boolean).join('<span aria-hidden="true">·</span>');
 
     return '<article class="card" data-c="' + esc(c.couleur) + '">' + vignette +
       '<div class="card-body">' +
-        '<div class="meta"><span class="badge">' + esc(c.nom) + "</span>" +
-          (r.type ? '<span class="kind">' + esc(r.type) + "</span>" : "") +
-          (payant ? '<span class="prix">' + (r.prix ? esc(r.prix) : "Payant") + "</span>" : '<span class="gratuit">Gratuit</span>') +
-          (r.date ? '<time class="date" datetime="' + esc(r.date) + '">' + esc(dateFr(r.date)) + "</time>" : "") +
-        "</div>" +
+        '<div class="meta"><span class="badge">' + esc(c.nom) + "</span>" + infos + "</div>" +
         "<h2>" + esc(r.titre) + "</h2>" +
-        (r.description ? '<p class="desc">' + esc(r.description) + "</p>" : "") +
+        (r.description ? '<p class="desc" title="' + esc(r.description) + '">' + esc(r.description) + "</p>" : "") +
         (r.auteur ? '<p class="auteur">' + esc(r.auteur) + "</p>" : "") +
         (tags ? '<div class="tags">' + tags + "</div>" : "") +
         '<div class="actions">' + boutons + "</div>" +
