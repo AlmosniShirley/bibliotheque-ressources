@@ -86,6 +86,21 @@ window.BIBLIOTHEQUE = {
 
 window.RESSOURCES = [
   {
+    titre: "Du développeur au pilote de systèmes augmentés",
+    description:
+      "Étude de synthèse sur les nouveaux métiers de l'IT à l'ère des agents IA : où se déplace la valeur, les rôles qui émergent, quatre cas clients (Back Market, SFEIR, ACS, Skello), les virages à prendre avec une roadmap 90 jours, les pièges à éviter et les garde-fous de confiance (AI Act).",
+    categorie: "ia",
+    type: "étude",
+    payant: true,
+    prix: "5 €",
+    achat: "https://payhip.com/b/vPlSC",
+    extrait: "documents/extraits/developpeur-pilote-systemes-augmentes-extrait.pdf",
+    apercu: "documents/apercus/developpeur-pilote-systemes-augmentes.jpg",
+    tags: ["IA", "IT", "nouveaux métiers", "agents IA", "recrutement", "gouvernance", "AI Act"],
+    date: "2026-11-18",
+    auteur: "BUILD RH · Étude de synthèse — 10 pages",
+  },
+  {
     titre: "Neuroatypies au travail : changez le travail",
     description:
       "Ne demandez pas aux personnes neuroatypiques de mieux se masquer. Recruter sur le réel, onboarder sans sous-entendus, aménager avant l'épuisement, RQTH et confidentialité, manager autrement : les actions concrètes à mettre en place au quotidien.",
