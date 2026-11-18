@@ -81,8 +81,8 @@ window.RESSOURCES = [
     categorie: "neuroatypisme",
     type: "carrousel",
     payant: true,
-    prix: "", // ex. "12 €"
-    achat: "", // lien Payhip, ex. "https://payhip.com/b/EfGh"
+    prix: "2,50 €",
+    achat: "https://payhip.com/b/gd3XQ",
     extrait: "documents/extraits/tdah-au-travail-extrait.pdf",
     apercu: "documents/apercus/tdah-au-travail.jpg",
     tags: ["TDAH", "hyperfocus", "recrutement", "management", "freelance", "CDI"],
