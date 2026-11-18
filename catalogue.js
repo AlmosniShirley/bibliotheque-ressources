@@ -66,8 +66,8 @@ window.RESSOURCES = [
     categorie: "neuroatypisme",
     type: "carrousel",
     payant: true,
-    prix: "", // ex. "9 €"
-    achat: "", // lien Payhip, ex. "https://payhip.com/b/AbCd"
+    prix: "2,50 €",
+    achat: "https://payhip.com/b/QkswI",
     extrait: "documents/extraits/neuroatypies-au-travail-extrait.pdf",
     apercu: "documents/apercus/neuroatypies-au-travail.jpg",
     tags: ["neuroatypie", "recrutement", "onboarding", "aménagements", "RQTH", "préjugés", "management"],
