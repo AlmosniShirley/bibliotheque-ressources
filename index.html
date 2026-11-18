@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=1">
 </head>
 <body>
   <a class="skip" href="#resultats">Aller aux ressources</a>
@@ -88,7 +88,10 @@
 
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
 
-  <script src="catalogue.js"></script>
-  <script src="app.js"></script>
+  <script>
+    // Charge toujours la dernière version du catalogue (évite l'ancienne liste gardée en mémoire par le navigateur)
+    document.write('<script src="catalogue.js?t=' + Date.now() + '"><\/script>');
+  </script>
+  <script src="app.js?v=1"></script>
 </body>
 </html>
