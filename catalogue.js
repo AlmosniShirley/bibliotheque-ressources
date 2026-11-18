@@ -86,6 +86,21 @@ window.BIBLIOTHEQUE = {
 
 window.RESSOURCES = [
   {
+    titre: "Les jobs IT à l'ère de l'IA : ce qui change, ce qu'il faut faire",
+    description:
+      "Infographie guide 2026 : la synthèse de 11 articles Prompt humain (interviews de CTO, tech leads, recruteurs) croisée avec l'étude LinkedIn sur le recrutement en 2026. Ce qui change, ce qu'il faut entamer dès aujourd'hui, les formations existantes, les nouvelles attentes du marché et les pièges à éviter.",
+    categorie: "ia",
+    type: "infographie",
+    payant: true,
+    prix: "", // ex. "3 €"
+    achat: "", // lien Payhip de l'infographie
+    extrait: "documents/extraits/jobs-it-ere-ia-infographie-extrait.jpg",
+    apercu: "documents/apercus/jobs-it-ere-ia-infographie.jpg",
+    tags: ["IA", "IT", "métiers", "recrutement", "formation", "LinkedIn"],
+    date: "2026-11-18",
+    auteur: "BUILD RH · Prompt humain — Guide 2026",
+  },
+  {
     titre: "Du développeur au pilote de systèmes augmentés",
     description:
       "Étude de synthèse sur les nouveaux métiers de l'IT à l'ère des agents IA : où se déplace la valeur, les rôles qui émergent, quatre cas clients (Back Market, SFEIR, ACS, Skello), les virages à prendre avec une roadmap 90 jours, les pièges à éviter et les garde-fous de confiance (AI Act).",

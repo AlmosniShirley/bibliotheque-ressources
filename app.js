@@ -143,7 +143,8 @@
     var vignette;
     if (apercu && image) {
       vignette = '<button type="button" class="thumb" data-voir="' + r._id + '" aria-label="Agrandir : ' + esc(r.titre) + '">' +
-        '<img src="' + esc(apercu) + '" alt="" loading="lazy"></button>';
+        '<img src="' + esc(apercu) + '" alt="" loading="lazy">' +
+        (payant ? '<span class="pages">Extrait gratuit</span>' : "") + "</button>";
     } else if (apercu) {
       vignette = '<a class="thumb" href="' + esc(url) + '" target="_blank" rel="noopener" aria-label="Ouvrir : ' + esc(r.titre) + '">' +
         '<img src="' + esc(apercu) + '" alt="" loading="lazy">' +
@@ -162,7 +163,8 @@
       boutons = r.achat
         ? '<a class="btn" href="' + esc(r.achat) + '" target="_blank" rel="noopener">Acheter' + (r.prix ? " · " + esc(r.prix) : "") + "</a>"
         : '<span class="btn off" aria-disabled="true">Bientôt en vente</span>';
-      if (r.extrait) boutons += '<a class="btn ghost" href="' + esc(r.extrait) + '" target="_blank" rel="noopener">Lire l\'extrait</a>';
+      if (r.extrait && image) boutons += '<button type="button" class="btn ghost" data-voir="' + r._id + '">Voir l\'extrait</button>';
+      else if (r.extrait) boutons += '<a class="btn ghost" href="' + esc(r.extrait) + '" target="_blank" rel="noopener">Lire l\'extrait</a>';
       boutons += '<button type="button" class="btn ghost" data-copier="' + esc(r.achat || r.extrait || "") + '">Copier le lien</button>';
     } else if (image) {
       boutons = '<button type="button" class="btn" data-voir="' + r._id + '">Voir</button>' +
@@ -226,8 +228,8 @@
 
   function ouvrirVisionneuse(r) {
     var d = $("visionneuse");
-    var url = r.fichier || r.lien;
-    $("viewer-titre").textContent = r.titre;
+    var url = r.payant ? r.extrait : (r.fichier || r.lien);
+    $("viewer-titre").textContent = r.titre + (r.payant ? " — extrait gratuit" : "");
     $("viewer-img").src = url;
     $("viewer-img").alt = r.titre;
     $("viewer-dl").href = url;
