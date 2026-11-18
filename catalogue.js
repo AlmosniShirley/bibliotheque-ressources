@@ -40,7 +40,7 @@ window.BIBLIOTHEQUE = {
   titre: "Des ressources pour",
   titreAccent: "changer le travail.", // partie du titre en corail
   sousTitre:
-    "Carrousels, infographies, guides et plusieurs types d'études (enquêtes, études de cas, synthèses de recherche, retours de terrain) à partager sur de nombreux sujets.",
+    "Carrousels, livres blancs, infographies et études (enquêtes, cas concrets, synthèses de recherche, retours de terrain) pour comprendre le travail et le faire évoluer. Des contenus sourcés, actionnables et prêts à partager.",
   contact: "", // facultatif : un lien (LinkedIn…) affiché en bas de page
 
   // Vos autres espaces, affichés en haut de page et dans « Aller plus loin ».
