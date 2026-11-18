@@ -260,6 +260,25 @@
 
   /* ---------- Démarrage ---------- */
   if (config.nomSite) document.title = config.nomSite;
+  var PICTOS = {
+    blog: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h4L19 9a2.8 2.8 0 0 0-4-4L4 16z"/><path d="M13.5 6.5l4 4"/></svg>',
+    youtube: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><rect x="2.5" y="5" width="19" height="14" rx="4"/><path d="M10 9.2v5.6l4.8-2.8z" fill="currentColor"/></svg>',
+    site: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 3.8 5.7 3.8 9s-1.3 6.3-3.8 9c-2.5-2.7-3.8-5.7-3.8-9S9.5 5.7 12 3z"/></svg>',
+  };
+  var liens = config.liens || [];
+  $("liens-top").innerHTML = liens.map(function (l) {
+    return '<a href="' + esc(l.url) + '" target="_blank" rel="noopener">' + (PICTOS[l.icone] || "") + "<span>" + esc(l.court || l.nom) + "</span></a>";
+  }).join("");
+  $("liens").innerHTML = liens.map(function (l) {
+    var host = "";
+    try { host = new URL(l.url).host.replace(/^www\./, "") + new URL(l.url).pathname.replace(/\/$/, ""); } catch (e) {}
+    return '<a class="lien-carte" data-i="' + esc(l.icone) + '" href="' + esc(l.url) + '" target="_blank" rel="noopener">' +
+      '<span class="picto">' + (PICTOS[l.icone] || PICTOS.site) + "</span>" +
+      "<span><strong>" + esc(l.nom) + "</strong>" + (l.description ? "<em>" + esc(l.description) + "</em>" : "") +
+      '<small>' + esc(host) + " ↗</small></span></a>";
+  }).join("");
+  document.querySelector(".ailleurs").hidden = !liens.length;
+
   var sujets = config.sujets || [];
   $("sujets").innerHTML = sujets.map(function (s) { return "<li>" + esc(s) + "</li>"; }).join("") +
     (config.sujetsSuite ? '<li class="suite">' + esc(config.sujetsSuite) + "…</li>" : "");

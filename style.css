@@ -247,3 +247,37 @@ dialog::backdrop { background: rgba(12, 20, 40, .8); }
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; }
 }
+
+/* ---------- Logo et liens BUILD RH ---------- */
+.logo { display: block; line-height: 0; }
+.logo img { height: 46px; width: auto; }
+.hero-nav { display: flex; align-items: center; gap: 18px; }
+.liens-top { display: flex; gap: 16px; }
+.liens-top a {
+  display: inline-flex; align-items: center; gap: 6px;
+  color: var(--hero-ink); text-decoration: none; font-size: .88rem; font-weight: 600; opacity: .9;
+}
+.liens-top a:hover { opacity: 1; color: var(--coral); }
+.liens-top svg { width: 18px; height: 18px; }
+@media (max-width: 760px) { .liens-top { display: none; } .logo img { height: 38px; } }
+
+.ailleurs { margin-top: 56px; }
+.ailleurs h2 { font-size: 1.35em; font-weight: 800; margin: 0 0 16px; }
+.liens-grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); }
+.lien-carte {
+  display: flex; gap: 14px; align-items: flex-start; text-decoration: none; color: var(--ink);
+  background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 18px 20px; box-shadow: var(--shadow); transition: transform .15s ease, border-color .15s;
+}
+.lien-carte:hover { transform: translateY(-2px); border-color: var(--coral); }
+.lien-carte .picto {
+  flex: none; width: 44px; height: 44px; border-radius: 12px; display: grid; place-items: center;
+  background: var(--navy); color: #fff;
+}
+.lien-carte[data-i="blog"] .picto { background: var(--coral); color: var(--navy); }
+.lien-carte[data-i="youtube"] .picto { background: var(--yellow); color: var(--navy); }
+.lien-carte[data-i="site"] .picto { background: var(--c-teal-dot); color: var(--navy); }
+.lien-carte .picto svg { width: 24px; height: 24px; }
+.lien-carte strong { display: block; font-size: 1.02em; }
+.lien-carte em { display: block; font-style: normal; color: var(--ink-2); font-size: .88em; margin: 2px 0 6px; }
+.lien-carte small { color: var(--accent-text); font-weight: 600; font-size: .8em; }

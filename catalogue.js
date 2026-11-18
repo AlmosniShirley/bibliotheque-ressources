@@ -41,7 +41,33 @@ window.BIBLIOTHEQUE = {
   titreAccent: "changer le travail.", // partie du titre en corail
   sousTitre:
     "Carrousels, infographies, guides et plusieurs types d'études (enquêtes, études de cas, synthèses de recherche, retours de terrain) à partager sur de nombreux sujets.",
-  contact: "", // facultatif : un lien (LinkedIn, site…) affiché en bas de page
+  contact: "", // facultatif : un lien (LinkedIn…) affiché en bas de page
+
+  // Vos autres espaces, affichés en haut de page et dans « Aller plus loin ».
+  // icone possible : "blog", "youtube", "site"
+  liens: [
+    {
+      nom: "Le blog Prompt humain",
+      court: "Blog",
+      description: "Articles et réflexions sur les RH, l'IA et l'inclusion.",
+      url: "https://prompt-humain.ghost.io/",
+      icone: "blog",
+    },
+    {
+      nom: "La chaîne YouTube",
+      court: "YouTube",
+      description: "Vidéos sur le TDAH, le neuroatypisme et le travail.",
+      url: "https://www.youtube.com/@TDArHH",
+      icone: "youtube",
+    },
+    {
+      nom: "Le site BUILD RH",
+      court: "Site",
+      description: "Accompagnement, coaching et formations BUILD RH.",
+      url: "https://build-rh.io/",
+      icone: "site",
+    },
+  ],
 
   // Les sujets affichés en haut de la page (vous pouvez en ajouter ou en retirer).
   sujets: ["RH", "Inclusion", "IA", "Neuroatypisme", "Outils & méthodes"],

@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>La bibliothèque BUILD RH</title>
   <meta name="description" content="La bibliothèque BUILD RH : carrousels, infographies, guides et études sur les RH, l'inclusion, l'IA, le neuroatypisme, les outils et méthodes, et bien d'autres sujets.">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23ff6b5b'/%3E%3Ctext x='16' y='22' font-family='Arial,sans-serif' font-weight='800' font-size='15' text-anchor='middle' fill='%23fff'%3ERH%3C/text%3E%3C/svg%3E">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
@@ -17,10 +18,13 @@
   <header class="hero">
     <div class="wrap">
       <div class="hero-top">
-        <span class="logo" aria-label="BUILD RH">BUILD <span class="rh">RH</span></span>
-        <button id="confort" class="toggle" type="button" aria-pressed="false">
+        <a class="logo" href="https://build-rh.io/" target="_blank" rel="noopener"><img src="assets/logo-buildrh.svg" alt="BUILD RH" width="160" height="50"></a>
+        <div class="hero-nav">
+          <nav class="liens-top" id="liens-top" aria-label="BUILD RH ailleurs"></nav>
+          <button id="confort" class="toggle" type="button" aria-pressed="false">
           <span aria-hidden="true">Aa</span> Lecture confort
         </button>
+        </div>
       </div>
       <h1><span id="titre">Des ressources pour</span> <span class="hl" id="titre-accent">changer le travail.</span></h1>
       <p id="sous-titre" class="lead"></p>
@@ -59,6 +63,11 @@
       <p>Essayez un autre mot-clé ou <button type="button" id="reset" class="linklike">réinitialisez les filtres</button>.</p>
     </div>
   </main>
+
+  <section class="wrap ailleurs" aria-labelledby="ailleurs-titre">
+    <h2 id="ailleurs-titre">Aller plus loin avec BUILD RH</h2>
+    <div id="liens" class="liens-grid"></div>
+  </section>
 
   <footer class="wrap foot">
     <p><strong>BUILD RH</strong> · Les documents sont libres de partage, merci de citer la source.</p>
