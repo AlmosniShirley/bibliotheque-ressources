@@ -86,6 +86,21 @@ window.BIBLIOTHEQUE = {
 
 window.RESSOURCES = [
   {
+    titre: "Design organisationnel à l'ère de l'IA",
+    description:
+      "Livre blanc pour construire les nouveaux rôles, la frontière humain–machine et les mécanismes de confiance : métiers qui se transforment, nouveaux rôles (AI Product Manager, Context Engineer, AgentOps, AI Governance Lead…), passage de l'organigramme au work chart, gouvernance, formation, rémunération et feuille de route 90 jours.",
+    categorie: "ia",
+    type: "livre blanc",
+    payant: true,
+    prix: "5 €",
+    achat: "https://payhip.com/b/MW63r",
+    extrait: "documents/extraits/design-organisationnel-ia-extrait.pdf",
+    apercu: "documents/apercus/design-organisationnel-ia.jpg",
+    tags: ["IA", "design organisationnel", "nouveaux rôles", "gouvernance", "rémunération", "compétences", "AI Act"],
+    date: "2026-11-20",
+    auteur: "BUILD RH · Livre blanc — 21 pages",
+  },
+  {
     titre: "Du développeur au pilote de systèmes augmentés",
     description:
       "Livre blanc sur les nouveaux métiers de l'IT à l'ère des agents IA : où se déplace la valeur, les rôles qui émergent, quatre cas clients (Back Market, SFEIR, ACS, Skello), les virages à prendre avec une roadmap 90 jours, les pièges à éviter et les garde-fous de confiance (AI Act).",
