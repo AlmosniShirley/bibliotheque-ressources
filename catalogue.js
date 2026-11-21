@@ -67,6 +67,13 @@ window.BIBLIOTHEQUE = {
       url: "https://build-rh.io/",
       icone: "site",
     },
+    {
+      nom: "Le Bon Angle",
+      court: "Le Bon Angle",
+      description: "Analyse gratuite de votre parcours et accompagnement carrière pour les profils Tech.",
+      url: "https://almosnishirley.github.io/le-bon-angle/",
+      icone: "angle",
+    },
   ],
 
   // Les sujets affichés en haut de la page (vous pouvez en ajouter ou en retirer).

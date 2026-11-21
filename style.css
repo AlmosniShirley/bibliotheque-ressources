@@ -247,6 +247,7 @@ a.thumb { cursor: pointer; }
 }
 .lien-carte[data-i="youtube"] .picto { background: #fde6f1; color: var(--pink); }
 .lien-carte[data-i="site"] .picto { background: var(--grad); color: #fff; }
+.lien-carte[data-i="angle"] .picto { background: #f8efee; color: #171717; }
 .lien-carte .picto svg { width: 24px; height: 24px; }
 .lien-carte strong { display: block; font-size: 1em; }
 .lien-carte em { display: block; font-style: normal; color: var(--ink-2); font-size: .86em; margin: 2px 0 6px; }
