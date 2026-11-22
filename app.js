@@ -270,6 +270,7 @@
   /* ---------- Démarrage ---------- */
   if (config.nomSite) document.title = config.nomSite;
   var PICTOS = {
+    ia: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M11 19.5s-6.5-3.8-6.5-8.5A3.6 3.6 0 0 1 11 9a3.6 3.6 0 0 1 6.5 2c0 4.7-6.5 8.5-6.5 8.5z"/><path d="M18.5 3l.7 1.6 1.6.7-1.6.7-.7 1.6-.7-1.6-1.6-.7 1.6-.7z" fill="currentColor"/></svg>',
     blog: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h4L19 9a2.8 2.8 0 0 0-4-4L4 16z"/><path d="M13.5 6.5l4 4"/></svg>',
     youtube: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><rect x="2.5" y="5" width="19" height="14" rx="4"/><path d="M10 9.2v5.6l4.8-2.8z" fill="currentColor"/></svg>',
     angle: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M4 19h16M4 19L16 7"/><path d="M10 19a6 6 0 0 0-1.76-4.24"/></svg>',

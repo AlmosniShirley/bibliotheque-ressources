@@ -74,6 +74,13 @@ window.BIBLIOTHEQUE = {
       url: "https://almosnishirley.github.io/le-bon-angle/",
       icone: "angle",
     },
+    {
+      nom: "IA FOR GOOD",
+      court: "IA FOR GOOD",
+      description: "Agents IA (analyse de parcours, scan d'annonce) et documentation sur l'IA au travail et le neuroatypisme.",
+      url: "https://aiforgood.page/",
+      icone: "ia",
+    },
   ],
 
   // Les sujets affichés en haut de la page (vous pouvez en ajouter ou en retirer).
